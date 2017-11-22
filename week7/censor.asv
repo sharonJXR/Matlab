@@ -1,0 +1,8 @@
+function [ m ] = censor( A,str )
+a = length(str);
+list = A(strncmp(A, str, a))
+for n = 1:length(list)
+    x = strfind(list{n}, str)
+    list(n) = [list{n}(1:x-1) 
+     
+
